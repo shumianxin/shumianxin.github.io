@@ -22,12 +22,12 @@
                 <name>Shumian Xin</name>
               </p>
               <p> I am a fifth-year PhD student in the <a href="https://www.ri.cmu.edu/">Robotics Institute</a> at <a href="http://www.cmu.edu/">Carnegie Mellon University</a>, 
-                working with Prof. <a href="https://www.cs.cmu.edu/~srinivas/">Srinivasa Narasimhan</a> and Prof. <a href="https://www.cs.cmu.edu/~igkioule/">Ioannis Gkioulekas</a> on computational imaging research.
+                working with Prof. <a href="https://www.cs.cmu.edu/~igkioule/">Ioannis Gkioulekas</a> and Prof. <a href="https://www.cs.cmu.edu/~srinivas/">Srinivasa Narasimhan</a> on computational imaging research.
                 I received my Master degree in <a href="https://www.ece.cmu.edu/">Electrical and Computer Engineering</a> from CMU in 2016, 
                 and my Bachelor degree in Electrical Engineering from <a href="hhttp://en.xjtu.edu.cn/">Xi'an Jiaotong University</a> in 2015.
               </p>
               <p> My research interests are in the area of computer vision and computational imaging. 
-                I have been working on non-line-of-sight imaging. 
+                I have been working on projects on non-line-of-sight imaging, dual-pixel defocus estimation and deblurring, as well as specular object reconstruction.
               </p>
               <p> I interned at <a href="https://research.google/">Google Research</a> in summer 2020 (hosted by <a href="https://rahuldotgarg.appspot.com/">Rahul Garg</a> and <a href="https://nealwadhwa.com/">Neal Wadhwa</a>).
               </p>
@@ -73,23 +73,35 @@
 							<em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2019 <br>
               <font color="red"><strong>(Oral Presentation, Best Paper Award)</strong></font>
               <br>
-              <a href="http://imaging.cs.cmu.edu/fermat_paths/">project page</a>
+              <a href="https://imaging.cs.cmu.edu/fermat_paths/">project page</a>
               /
-              <a href="http://imaging.cs.cmu.edu/fermat_paths/assets/cvpr2019.pdf">paper</a>
+              <a href="https://imaging.cs.cmu.edu/fermat_paths/assets/cvpr2019.pdf">paper</a>
               /
               <a href="https://github.com/cmu-ci-lab/nlos_fermat_path">code</a>
             </td>
           </tr>
 
 
-          <tr>
+          <tr onmouseout="dualpixel_stop()" onmouseover="dualpixel_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <img src='images/mipnerf_ipe_yellow.png' width="160">
+                <div class="two" id='dualdefocus_image'>
+                  <img src='images/2021_ICCV_dp_defocus_output.png' width="160"></div>
+                  <img src='images/2021_ICCV_dp_defocus_input.gif' width="160">
               </div>
+              <script type="text/javascript">
+                function dualpixel_start() {
+                  document.getElementById('dualdefocus_image').style.opacity = "1";
+                }
+
+                function dualpixel_stop() {
+                  document.getElementById('dualdefocus_image').style.opacity = "0";
+                }
+                dualpixel_stop()
+              </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://imaging.cs.cmu.edu/fermat_paths/">
+              <a href="https://imaging.cs.cmu.edu/dual_pixels/">
                 <papertitle>Defocus Map Estimation and Deblurring from a Single Dual-Pixel Image</papertitle>
               </a>
               <br>
@@ -127,7 +139,7 @@
           <tbody>
             <tr>
               <td width="100%" valign="center">
-                Reviewer, ICCV 2021 <br>
+                Reviewer, IEEE Transactions on computational imaging (TCI), Optical Express, ICCV 2021 <br>
                 Teaching Assistant, CMU, 16-720 Computer Vision, Fall 2019 & Spring 2020
               </td>
             </tr>
