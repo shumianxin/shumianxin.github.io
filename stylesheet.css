@@ -102,31 +102,6 @@ strong {
   font-weight: 700
 }
 
-.profile {
-  display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
-  grid-template-areas:
-    "name portrait"
-    "bio portrait";
-  align-items: center;
-}
-
-.profile > .name {
-  grid-area: name;
-  margin: 35px 20px 0;
-}
-
-.profile-bio {
-  grid-area: bio;
-  display: flow-root;
-  padding: 0 20px 20px;
-}
-
-.profile-portrait {
-  grid-area: portrait;
-  padding: 20px;
-}
-
 .name {
   display: flex;
   flex-wrap: wrap;
@@ -194,25 +169,41 @@ strong {
     row-gap: 0.1em;
   }
 
-  .profile {
+  .profile-row {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
   }
 
-  .profile > .name {
+  .profile-row > .profile-bio {
+    display: contents;
+  }
+
+  .profile-row > .profile-bio > .name {
+    order: 0;
+    width: calc(100% - 40px);
     margin: 20px 20px 15px;
   }
 
-  .profile-bio {
-    padding: 0 20px 10px;
+  .profile-row > .profile-bio > p {
+    order: 2;
+    align-self: stretch;
+    margin: 0 20px 15px;
   }
 
-  .profile-portrait {
-    align-self: center;
-    width: 128px;
-    max-width: 100%;
-    padding: 0;
+  .profile-row > .profile-bio > p:first-of-type {
+    margin-top: 15px;
+  }
+
+  .profile-row > .profile-bio > p:last-child {
+    margin-bottom: 25px;
+  }
+
+  .profile-row > .profile-portrait {
+    order: 1;
+    width: 128px !important;
+    max-width: 100% !important;
+    padding: 0 !important;
   }
 
   .entry-row,
